@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <title>E numbers</title>
 
@@ -25,8 +25,9 @@
             </div>
 
             <div class="col-7 p-3 mx-auto text-center">
-                <h1>E Numbers</h1>
-                <p>E numbers are codes for substances that are permitted to be used as food additives.</p>
+                
+                <a href="{{URL::to('/')}}"><h1>E Numbers</h1></a>
+                <h2>E numbers are codes for substances that are permitted to be used as food additives.</h2>
             </div>
 
             <div class="col-7 p-3 mx-auto">
@@ -77,7 +78,16 @@
     <!--if item not found from database display message   -->
     @elseif(isset($message))
     <div class="col-7 p-5 mx-auto">
-        <p> {{ $message}} </p>
+                <div class="card-header">
+                Group type: <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title"><i class="fas fa-exclamation-triangle"></i> </h2>
+                    <h3 class="card-text">{{ $message }}</h3>
+                    <p class="card-text">Details: <i class="fas fa-exclamation-triangle"></i> </p>
+
+                </div>
+       
     </div>
 @endif
 
@@ -96,10 +106,20 @@
 
             </div>
 -->
-
+            
             <div class="col-12 p-5 advert">
                 advert
             </div>
+
+            <div class="col-7 p-5 mx-auto pageLinks"><p>For more information follow these links:</p>
+            
+             <a class="badge badge-primary" href=" http://www.fao.org/fao-who-codexalimentarius/en/">Codex Alimentarius</a>
+             <a class="badge badge-primary" href="http://www.efsa.europa.eu/">European Food Safety Authority</a> 
+             <a class="badge badge-primary" href="http://www.fao.org">Food and Agriculture Organization of the United Nations</a>
+            </div>
+           
+            <div class="col-7 p-5 mx-auto"><i class="far fa-envelope"></i> info@mail.com </div>
+
         </div>
     </div>
 

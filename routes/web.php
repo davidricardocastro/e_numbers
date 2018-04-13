@@ -21,9 +21,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/detail/{id}', 'DetailController@show')->name('enumber detail');
+//Route::get('/detail/{id}', 'DetailController@show')->name('enumber detail');
 
-Route::get('/list', 'ListController@listing');
+//Route::get('/list', 'ListController@listing');
 
 
 Route::post('/search', function(){
@@ -34,5 +34,5 @@ Route::post('/search', function(){
         if(count($enumber) > 0)
         return view('index')->withDetails($enumber)->withQuery($q);
     }
-    return view('index')->withMessage("code not found!");
+    return view('index')->withMessage("E number not found!");
 });
